@@ -12,7 +12,7 @@ func Say() {
 
 	// Way 2
 	var message2 Message
-	SetData(&message2, " | 002")
+	SetData(&message2, " | 002") // function always passed the VALUE not the REFERENCE/ADDR.
 
 	// Way 3
 	var message3 Message
