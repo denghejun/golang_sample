@@ -6,7 +6,13 @@ import (
 )
 
 func Say() {
+	// Way 1
 	message := NewMessage()
-	message.setData(" : 001")
-	fmt.Println(quote.Go() + message.getData())
+	message.setData(" | 001")
+
+	// Way 2
+	var message1 Message
+	SetData(&message1, " | 002")
+
+	fmt.Println(quote.Go() + message.getData() + message1.getData())
 }
