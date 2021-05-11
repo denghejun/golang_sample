@@ -6,6 +6,7 @@ File->New->Project...->Select "Go modules"
 ```
 
 ## Download all dependencies
+Go mod vendor will collect all the external packages which are used in this main module, even the remote package/dependency was broken, we still can build the project successfully.
 ```
 go mod vendor
 ```
