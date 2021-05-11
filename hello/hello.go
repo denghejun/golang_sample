@@ -7,12 +7,16 @@ import (
 
 func Say() {
 	// Way 1
-	message := NewMessage()
-	message.setData(" | 001")
+	message1 := NewMessage()
+	message1.setData(" | 001")
 
 	// Way 2
-	var message1 Message
-	SetData(&message1, " | 002")
+	var message2 Message
+	SetData(&message2, " | 002")
 
-	fmt.Println(quote.Go() + message.getData() + message1.getData())
+	// Way 3
+	var message3 Message
+	message3.data = " | 003"
+
+	fmt.Println(quote.Go() + message1.getData() + message2.getData() + message3.getData())
 }
