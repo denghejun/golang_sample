@@ -1,0 +1,14 @@
+FROM golang:latest as compile
+COPY . /build
+WORKDIR /build
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GOARM=6 go build -ldflags '-w -s' -o server
+ENTRYPOINT ["/build/server"]
+# -------------------------------------------
+FROM alpine:3.11
+ENV APP_NAME golang_server
+RUN apk --no-cache add ca-certificates
+RUN adduser -S ${APP_NAME}
+USER ${APP_NAME}
+WORKDIR /home/${APP_NAME}
+COPY --from=compile /build/server /
+ENTRYPOINT ["/home/golang_server/server"]
