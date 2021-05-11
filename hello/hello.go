@@ -6,5 +6,7 @@ import (
 )
 
 func Say() {
-	fmt.Println(quote.Go())
+	message := NewMessage()
+	message.setData(" : 001")
+	fmt.Println(quote.Go() + message.getData())
 }
