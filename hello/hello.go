@@ -19,7 +19,7 @@ func Say() {
 	message3.data = " | 003"
 
 	// Way 4
-	var message4 Info
+	var message4 Info // interface checking, if not implement the method listed in interface Info, there will be a type error.
 	message4 = &Message{}
 	message4.setData(" | 004")
 
