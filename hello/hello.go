@@ -18,5 +18,10 @@ func Say() {
 	var message3 Message
 	message3.data = " | 003"
 
-	fmt.Println(quote.Go() + message1.getData() + message2.getData() + message3.getData())
+	// Way 4
+	var message4 Info
+	message4 = &Message{}
+	message4.setData(" | 004")
+
+	fmt.Println(quote.Go() + message1.getData() + message2.getData() + message3.getData() + message4.getData())
 }
