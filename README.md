@@ -23,4 +23,19 @@ go run ./main
 cd main
 go build
 ```
-# golang_sample
+# Build Docker image
+```
+docker build -t golang_server:v1.0 -f docker/Dockerfile .
+```
+
+# Check the image locally
+```
+docker image ls
+```
+
+
+# docker run image
+```
+docker run  golang_server:v1.0 
+```
+
