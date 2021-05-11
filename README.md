@@ -1,4 +1,4 @@
-## A multiple modules based on Golang (IDE GoLand)
+## A multiple modules based on Golang (IDE GoLand) with Docker
 
 ## Create module based project in GoLand
 
